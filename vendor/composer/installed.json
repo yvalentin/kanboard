@@ -164,34 +164,33 @@
         ]
     },
     {
-        "name": "psr/log",
-        "version": "1.0.2",
-        "version_normalized": "1.0.2.0",
+        "name": "erusev/parsedown",
+        "version": "1.7.1",
+        "version_normalized": "1.7.1.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/php-fig/log.git",
-            "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d"
+            "url": "https://github.com/erusev/parsedown.git",
+            "reference": "92e9c27ba0e74b8b028b111d1b6f956a15c01fc1"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/php-fig/log/zipball/4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
-            "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
+            "url": "https://api.github.com/repos/erusev/parsedown/zipball/92e9c27ba0e74b8b028b111d1b6f956a15c01fc1",
+            "reference": "92e9c27ba0e74b8b028b111d1b6f956a15c01fc1",
             "shasum": ""
         },
         "require": {
+            "ext-mbstring": "*",
             "php": ">=5.3.0"
         },
-        "time": "2016-10-10T12:19:37+00:00",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "1.0.x-dev"
-            }
+        "require-dev": {
+            "phpunit/phpunit": "^4.8.35"
         },
+        "time": "2018-03-08T01:11:30+00:00",
+        "type": "library",
         "installation-source": "dist",
         "autoload": {
-            "psr-4": {
-                "Psr\\Log\\": "Psr/Log/"
+            "psr-0": {
+                "Parsedown": ""
             }
         },
         "notification-url": "https://packagist.org/downloads/",
@@ -200,16 +199,16 @@
         ],
         "authors": [
             {
-                "name": "PHP-FIG",
-                "homepage": "http://www.php-fig.org/"
+                "name": "Emanuil Rusev",
+                "email": "hello@erusev.com",
+                "homepage": "http://erusev.com"
             }
         ],
-        "description": "Common interface for logging libraries",
-        "homepage": "https://github.com/php-fig/log",
+        "description": "Parser for Markdown.",
+        "homepage": "http://parsedown.org",
         "keywords": [
-            "log",
-            "psr",
-            "psr-3"
+            "markdown",
+            "parser"
         ]
     },
     {
@@ -318,6 +317,58 @@
         ]
     },
     {
+        "name": "pimple/pimple",
+        "version": "v3.2.2",
+        "version_normalized": "3.2.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/silexphp/Pimple.git",
+            "reference": "4d45fb62d96418396ec58ba76e6f065bca16e10a"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/silexphp/Pimple/zipball/4d45fb62d96418396ec58ba76e6f065bca16e10a",
+            "reference": "4d45fb62d96418396ec58ba76e6f065bca16e10a",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0",
+            "psr/container": "^1.0"
+        },
+        "require-dev": {
+            "symfony/phpunit-bridge": "^3.2"
+        },
+        "time": "2017-07-23T07:32:15+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.2.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Pimple": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            }
+        ],
+        "description": "Pimple, a simple Dependency Injection Container",
+        "homepage": "http://pimple.sensiolabs.org",
+        "keywords": [
+            "container",
+            "dependency injection"
+        ]
+    },
+    {
         "name": "psr/container",
         "version": "1.0.0",
         "version_normalized": "1.0.0.0",
@@ -369,38 +420,34 @@
         ]
     },
     {
-        "name": "pimple/pimple",
-        "version": "v3.2.2",
-        "version_normalized": "3.2.2.0",
+        "name": "psr/log",
+        "version": "1.0.2",
+        "version_normalized": "1.0.2.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/silexphp/Pimple.git",
-            "reference": "4d45fb62d96418396ec58ba76e6f065bca16e10a"
+            "url": "https://github.com/php-fig/log.git",
+            "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/silexphp/Pimple/zipball/4d45fb62d96418396ec58ba76e6f065bca16e10a",
-            "reference": "4d45fb62d96418396ec58ba76e6f065bca16e10a",
+            "url": "https://api.github.com/repos/php-fig/log/zipball/4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
+            "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
             "shasum": ""
         },
         "require": {
-            "php": ">=5.3.0",
-            "psr/container": "^1.0"
+            "php": ">=5.3.0"
         },
-        "require-dev": {
-            "symfony/phpunit-bridge": "^3.2"
-        },
-        "time": "2017-07-23T07:32:15+00:00",
+        "time": "2016-10-10T12:19:37+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "3.2.x-dev"
+                "dev-master": "1.0.x-dev"
             }
         },
         "installation-source": "dist",
         "autoload": {
-            "psr-0": {
-                "Pimple": "src/"
+            "psr-4": {
+                "Psr\\Log\\": "Psr/Log/"
             }
         },
         "notification-url": "https://packagist.org/downloads/",
@@ -409,15 +456,16 @@
         ],
         "authors": [
             {
-                "name": "Fabien Potencier",
-                "email": "fabien@symfony.com"
+                "name": "PHP-FIG",
+                "homepage": "http://www.php-fig.org/"
             }
         ],
-        "description": "Pimple, a simple Dependency Injection Container",
-        "homepage": "http://pimple.sensiolabs.org",
+        "description": "Common interface for logging libraries",
+        "homepage": "https://github.com/php-fig/log",
         "keywords": [
-            "container",
-            "dependency injection"
+            "log",
+            "psr",
+            "psr-3"
         ]
     },
     {
@@ -475,64 +523,6 @@
             "mail",
             "mailer"
         ]
-    },
-    {
-        "name": "symfony/debug",
-        "version": "v3.4.2",
-        "version_normalized": "3.4.2.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/symfony/debug.git",
-            "reference": "543deab3ffff94402440b326fc94153bae2dfa7a"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/symfony/debug/zipball/543deab3ffff94402440b326fc94153bae2dfa7a",
-            "reference": "543deab3ffff94402440b326fc94153bae2dfa7a",
-            "shasum": ""
-        },
-        "require": {
-            "php": "^5.5.9|>=7.0.8",
-            "psr/log": "~1.0"
-        },
-        "conflict": {
-            "symfony/http-kernel": ">=2.3,<2.3.24|~2.4.0|>=2.5,<2.5.9|>=2.6,<2.6.2"
-        },
-        "require-dev": {
-            "symfony/http-kernel": "~2.8|~3.0|~4.0"
-        },
-        "time": "2017-12-12T08:27:14+00:00",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "3.4-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Symfony\\Component\\Debug\\": ""
-            },
-            "exclude-from-classmap": [
-                "/Tests/"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Fabien Potencier",
-                "email": "fabien@symfony.com"
-            },
-            {
-                "name": "Symfony Community",
-                "homepage": "https://symfony.com/contributors"
-            }
-        ],
-        "description": "Symfony Debug Component",
-        "homepage": "https://symfony.com"
     },
     {
         "name": "symfony/console",
@@ -606,6 +596,64 @@
         "homepage": "https://symfony.com"
     },
     {
+        "name": "symfony/debug",
+        "version": "v3.4.2",
+        "version_normalized": "3.4.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/debug.git",
+            "reference": "543deab3ffff94402440b326fc94153bae2dfa7a"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/debug/zipball/543deab3ffff94402440b326fc94153bae2dfa7a",
+            "reference": "543deab3ffff94402440b326fc94153bae2dfa7a",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^5.5.9|>=7.0.8",
+            "psr/log": "~1.0"
+        },
+        "conflict": {
+            "symfony/http-kernel": ">=2.3,<2.3.24|~2.4.0|>=2.5,<2.5.9|>=2.6,<2.6.2"
+        },
+        "require-dev": {
+            "symfony/http-kernel": "~2.8|~3.0|~4.0"
+        },
+        "time": "2017-12-12T08:27:14+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.4-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Component\\Debug\\": ""
+            },
+            "exclude-from-classmap": [
+                "/Tests/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony Debug Component",
+        "homepage": "https://symfony.com"
+    },
+    {
         "name": "symfony/event-dispatcher",
         "version": "v3.4.2",
         "version_normalized": "3.4.2.0",
@@ -671,34 +719,38 @@
         "homepage": "https://symfony.com"
     },
     {
-        "name": "erusev/parsedown",
-        "version": "1.7.1",
-        "version_normalized": "1.7.1.0",
+        "name": "symfony/finder",
+        "version": "v3.4.8",
+        "version_normalized": "3.4.8.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/erusev/parsedown.git",
-            "reference": "92e9c27ba0e74b8b028b111d1b6f956a15c01fc1"
+            "url": "https://github.com/symfony/finder.git",
+            "reference": "bd14efe8b1fabc4de82bf50dce62f05f9a102433"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/erusev/parsedown/zipball/92e9c27ba0e74b8b028b111d1b6f956a15c01fc1",
-            "reference": "92e9c27ba0e74b8b028b111d1b6f956a15c01fc1",
+            "url": "https://api.github.com/repos/symfony/finder/zipball/bd14efe8b1fabc4de82bf50dce62f05f9a102433",
+            "reference": "bd14efe8b1fabc4de82bf50dce62f05f9a102433",
             "shasum": ""
         },
         "require": {
-            "ext-mbstring": "*",
-            "php": ">=5.3.0"
+            "php": "^5.5.9|>=7.0.8"
         },
-        "require-dev": {
-            "phpunit/phpunit": "^4.8.35"
-        },
-        "time": "2018-03-08T01:11:30+00:00",
+        "time": "2018-04-04T05:07:11+00:00",
         "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.4-dev"
+            }
+        },
         "installation-source": "dist",
         "autoload": {
-            "psr-0": {
-                "Parsedown": ""
-            }
+            "psr-4": {
+                "Symfony\\Component\\Finder\\": ""
+            },
+            "exclude-from-classmap": [
+                "/Tests/"
+            ]
         },
         "notification-url": "https://packagist.org/downloads/",
         "license": [
@@ -706,17 +758,16 @@
         ],
         "authors": [
             {
-                "name": "Emanuil Rusev",
-                "email": "hello@erusev.com",
-                "homepage": "http://erusev.com"
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
             }
         ],
-        "description": "Parser for Markdown.",
-        "homepage": "http://parsedown.org",
-        "keywords": [
-            "markdown",
-            "parser"
-        ]
+        "description": "Symfony Finder Component",
+        "homepage": "https://symfony.com"
     },
     {
         "name": "symfony/polyfill-mbstring",
@@ -778,56 +829,5 @@
             "portable",
             "shim"
         ]
-    },
-    {
-        "name": "symfony/finder",
-        "version": "v3.4.8",
-        "version_normalized": "3.4.8.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/symfony/finder.git",
-            "reference": "bd14efe8b1fabc4de82bf50dce62f05f9a102433"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/symfony/finder/zipball/bd14efe8b1fabc4de82bf50dce62f05f9a102433",
-            "reference": "bd14efe8b1fabc4de82bf50dce62f05f9a102433",
-            "shasum": ""
-        },
-        "require": {
-            "php": "^5.5.9|>=7.0.8"
-        },
-        "time": "2018-04-04T05:07:11+00:00",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "3.4-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Symfony\\Component\\Finder\\": ""
-            },
-            "exclude-from-classmap": [
-                "/Tests/"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Fabien Potencier",
-                "email": "fabien@symfony.com"
-            },
-            {
-                "name": "Symfony Community",
-                "homepage": "https://symfony.com/contributors"
-            }
-        ],
-        "description": "Symfony Finder Component",
-        "homepage": "https://symfony.com"
     }
 ]
