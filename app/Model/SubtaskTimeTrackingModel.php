@@ -259,10 +259,7 @@ class SubtaskTimeTrackingModel extends Base
     public function updateTaskTimeTracking($task_id)
     {
         $values = $this->calculateSubtaskTime($task_id);
-        // Doesn't update time_estimated of task if sum of subtask time estimated is equal to 0
-        if($values['time_estimated'] == 0) {
-            unset($values['time_estimated']);
-        }
+
         return $this->db
                     ->table(TaskModel::TABLE)
                     ->eq('id', $task_id)
