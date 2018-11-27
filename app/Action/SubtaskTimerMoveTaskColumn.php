@@ -79,15 +79,16 @@ class SubtaskTimerMoveTaskColumn extends Base
      */
     public function doAction(array $data)
     {
+        $userId = $this->userSession->getId();
         $subtaskID = $this->subtaskModel->create(array(
             'title' => $this->getParam('subtask'),
-            'user_id' => $data['task']['creator_id'],
+            'user_id' => $userId,
             'task_id' => $data['task']['id'],
             'status' => SubtaskModel::STATUS_INPROGRESS,
         ));
 
         if ($subtaskID !== false) {
-            return $this->subtaskTimeTrackingModel->toggleTimer($subtaskID, $data['task']['creator_id'], SubtaskModel::STATUS_INPROGRESS);
+            return $this->subtaskTimeTrackingModel->toggleTimer($subtaskID, $userId, SubtaskModel::STATUS_INPROGRESS);
         }
 
         return false;
