@@ -80,6 +80,7 @@ class SubtaskTimerMoveTaskColumn extends Base
     public function doAction(array $data)
     {
         $userId = $this->userSession->getId();
+
 //        $userId = $data['task']['creator_id'];
         $subtaskID = $this->subtaskModel->create(array(
             'title' => $this->getParam('subtask'),
