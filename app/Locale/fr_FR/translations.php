@@ -528,6 +528,7 @@ return array(
     'RSD - Serbian dinar' => 'RSD - Dinar serbe',
     'CNY - Chinese Yuan' => 'CNY - Yuan (Chine)',
     'USD - US Dollar' => 'USD - Dollar américain',
+    'VES - Venezuelan Bolívar' => 'Bolivar vénézuélien',
     'Destination column' => 'Colonne de destination',
     'Move the task to another column when assigned to a user' => 'Déplacer la tâche dans une autre colonne lorsque celle-ci est assignée à quelqu\'un',
     'Move the task to another column when assignee is cleared' => 'Déplacer la tâche dans une autre colonne lorsque celle-ci n\'est plus assignée',
@@ -1406,4 +1407,10 @@ return array(
     'Automatically update the start date when the task is moved away from a specific column' => 'Mettre à jour automatiquement la date de début lorsque la tâche change de colonne',
     'HTTP Client:' => 'Client HTTP :',
     'XBT - bitcoin' => 'XBT - Bitcoin',
+    'Assigned' => 'Assigné',
+    'Task limits apply to each swimlane individually' => 'Les limites de tâches s\'appliquent à chaque swimlane individuellement',
+    'Task limits are applied to each swimlane individually' => 'Les limites de tâches sont appliquées à chaque swimlane individuellement',
+    'Task limits are applied across swimlanes' => 'Les limites de tâches sont appliquées entre les swimlanes',
+    // 'Change to global tag' => '',
+    // 'Do you really want to make the tag "%s" global?' => '',
 );
