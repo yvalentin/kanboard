@@ -318,7 +318,7 @@ class User
      * @access public
      * @return string
      */
-    public function getGroupAdminDn()
+    public function getGroupAdminDn(): string
     {
         return strtolower(LDAP_GROUP_ADMIN_DN);
     }
@@ -329,7 +329,7 @@ class User
      * @access public
      * @return string
      */
-    public function getGroupManagerDn()
+    public function getGroupManagerDn(): string
     {
         return LDAP_GROUP_MANAGER_DN;
     }
@@ -342,10 +342,6 @@ class User
      */
     public function getBaseDn()
     {
-        if (! LDAP_USER_BASE_DN) {
-            throw new LogicException('LDAP user base DN empty, check the parameter LDAP_USER_BASE_DN');
-        }
-
         return LDAP_USER_BASE_DN;
     }
 

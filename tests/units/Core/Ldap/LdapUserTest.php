@@ -15,7 +15,7 @@ class LdapUserTest extends Base
     private $user;
     private $group;
 
-    public function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
 
@@ -783,14 +783,6 @@ class LdapUserTest extends Base
         );
         $this->assertEquals(Role::APP_USER, $user->getRole());
         $this->assertEquals(array('is_ldap_user' => 1), $user->getExtraAttributes());
-    }
-
-    public function testGetBaseDnNotConfigured()
-    {
-        $this->expectException('\LogicException');
-
-        $user = new User($this->query);
-        $user->getBaseDn();
     }
 
     public function testGetLdapUserPatternNotConfigured()

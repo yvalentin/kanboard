@@ -33,6 +33,13 @@ abstract class BaseController extends Base
         }
     }
 
+    protected function checkReusableGETCSRFParam()
+    {
+        if (! $this->token->validateReusableCSRFToken($this->request->getStringParam('csrf_token'))) {
+            throw new AccessForbiddenException();
+        }
+    }
+
     protected function checkCSRFForm()
     {
         if (! $this->token->validateCSRFToken($this->request->getRawValue('csrf_token'))) {
@@ -88,16 +95,10 @@ abstract class BaseController extends Base
     {
         $task_id = $this->request->getIntegerParam('task_id');
         $file_id = $this->request->getIntegerParam('file_id');
-        $project_id = $this->request->getIntegerParam('project_id');
         $model = 'projectFileModel';
 
         if ($task_id > 0) {
             $model = 'taskFileModel';
-            $task_project_id = $this->taskFinderModel->getProjectId($task_id);
-
-            if ($project_id != $task_project_id) {
-                throw new AccessForbiddenException();
-            }
         }
 
         $file = $this->$model->getById($file_id);
@@ -107,8 +108,6 @@ abstract class BaseController extends Base
         }
 
         if (isset($file['task_id']) && $file['task_id'] != $task_id) {
-            throw new AccessForbiddenException();
-        } else if (isset($file['project_id']) && $file['project_id'] != $project_id) {
             throw new AccessForbiddenException();
         }
 

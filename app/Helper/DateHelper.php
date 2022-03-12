@@ -38,7 +38,7 @@ class DateHelper extends Base
             return '';
         }
 
-        if (! ctype_digit($value)) {
+        if (! ctype_digit((string) $value)) {
             $value = strtotime($value);
         }
 
@@ -75,6 +75,18 @@ class DateHelper extends Base
 
         $format = sprintf("%%a %s, %%h %s, %%i %s, %%s %s", t('days'), t('hours'), t('minutes'), t('seconds'));
         return $dtF->diff($dtT)->format($format);
+    }
+
+    /**
+     * Get duration in hours into human format
+     *
+     * @access public
+     * @param  float  $hours
+     * @return string
+     */
+    public function durationHours($hours)
+    {
+        return sprintf('%0.2f %s', round($hours, 2), t('hours'));
     }
 
     /**

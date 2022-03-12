@@ -1,11 +1,20 @@
 ---
 name: Bug report
-about: This template is only for bug reports, use the forum for questions and feature requests.
+about: This template is only for bug reports
+title: ''
+labels: bug
+assignees: ''
 
 ---
 
+### Checklist
+
+- [ ] I verified that Kanboard is correctly installed
+- [ ] I verified that the problem does not come from a plugin
+- [ ] I verified that the problem is not already reported
+- [ ] I understand that Kanboard is in maintenance mode. It doesn't mean it's abandoned, but there is no significant feature development
+
 <!-- Please, read the documentation: https://docs.kanboard.org/ -->
-<!-- Ask questions on the Forum: https://kanboard.discourse.group/ -->
 
 ### Actual behaviour
 
@@ -27,7 +36,7 @@ about: This template is only for bug reports, use the forum for questions and fe
 
 ### Configuration
 
-- Kanboard version:
+- Kanboard version: <!-- provide exact version (not master) -->
 - Database type and version:
 - PHP version:
 - OS:
