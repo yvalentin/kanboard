@@ -50,6 +50,7 @@ defined('DB_PASSWORD') or define('DB_PASSWORD', getenv('DB_PASSWORD') ?: '');
 defined('DB_HOSTNAME') or define('DB_HOSTNAME', getenv('DB_HOSTNAME') ?: 'localhost');
 defined('DB_NAME') or define('DB_NAME', getenv('DB_NAME') ?: 'kanboard');
 defined('DB_PORT') or define('DB_PORT', intval(getenv('DB_PORT')) ?: null);
+defined('DB_ODBC_DSN') or define('DB_ODBC_DSN', getenv('DB_ODBC_DSN') ?: 'kanboard');
 defined('DB_SSL_KEY') or define('DB_SSL_KEY', getenv('DB_SSL_KEY') ?: null);
 defined('DB_SSL_CERT') or define('DB_SSL_CERT', getenv('DB_SSL_CERT') ?: null);
 defined('DB_SSL_CA') or define('DB_SSL_CA', getenv('DB_SSL_CA') ?: null);
@@ -92,6 +93,8 @@ defined('LDAP_GROUP_FILTER') or define('LDAP_GROUP_FILTER', getenv('LDAP_GROUP_F
 defined('LDAP_GROUP_USER_FILTER') or define('LDAP_GROUP_USER_FILTER', getenv('LDAP_GROUP_USER_FILTER') ?: '');
 defined('LDAP_GROUP_USER_ATTRIBUTE') or define('LDAP_GROUP_USER_ATTRIBUTE', getenv('LDAP_GROUP_USER_ATTRIBUTE') ?: 'username');
 defined('LDAP_GROUP_ATTRIBUTE_NAME') or define('LDAP_GROUP_ATTRIBUTE_NAME', getenv('LDAP_GROUP_ATTRIBUTE_NAME') ?: 'cn');
+defined('LDAP_GROUP_SYNC') or define('LDAP_GROUP_SYNC', getenv('LDAP_GROUP_SYNC') ?: true);
+
 
 // Proxy authentication
 defined('REVERSE_PROXY_AUTH') or define('REVERSE_PROXY_AUTH', strtolower(getenv('REVERSE_PROXY_AUTH')) === 'true');
@@ -173,4 +176,4 @@ defined('SHOW_GROUP_MEMBERSHIPS_IN_USERLIST') or define('SHOW_GROUP_MEMBERSHIPS_
 defined('SHOW_GROUP_MEMBERSHIPS_IN_USERLIST_WITH_LIMIT') or define('SHOW_GROUP_MEMBERSHIPS_IN_USERLIST_WITH_LIMIT', intval(getenv('SHOW_GROUP_MEMBERSHIPS_IN_USERLIST_WITH_LIMIT')) ?: 7);
 
 // Documentation URL
-defined('DOCUMENTATION_URL_PATTERN') or define('DOCUMENTATION_URL_PATTERN', getenv('DOCUMENTATION_URL_PATTERN') ?: 'https://docs.kanboard.org/en/%s/user_guide/%s.html');
+defined('DOCUMENTATION_URL_PATTERN') or define('DOCUMENTATION_URL_PATTERN', getenv('DOCUMENTATION_URL_PATTERN') ?: 'https://docs.kanboard.org/v1/user/%s');

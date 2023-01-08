@@ -21,7 +21,7 @@ class TextHelper extends Base
      */
     public function e($value)
     {
-        return htmlspecialchars($value, ENT_QUOTES, 'UTF-8', false);
+        return htmlspecialchars((string) $value, ENT_QUOTES, 'UTF-8', false);
     }
 
     /**
@@ -49,7 +49,7 @@ class TextHelper extends Base
         $parser = new Markdown($this->container, $isPublicLink);
         $parser->setMarkupEscaped(MARKDOWN_ESCAPE_HTML);
         $parser->setBreaksEnabled(true);
-        return $parser->text($text);
+        return $parser->text($text ?: '');
     }
 
     /**
