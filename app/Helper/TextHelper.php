@@ -53,6 +53,22 @@ class TextHelper extends Base
     }
 
     /**
+     * Reply transformation
+     *
+     * @param  string   $username
+     * @param  string   $text
+     * @return string
+     */
+    public function reply($username, $text)
+    {
+        $res = t('%s wrote: ', $username).PHP_EOL.'> ';
+
+        $lines = preg_split("/\r\n|\n|\r/", $text);
+
+        return $res.implode(PHP_EOL.'> ', $lines);
+    }
+
+    /**
      * Format a file size
      *
      * @param  integer  $size        Size in bytes
@@ -69,29 +85,6 @@ class TextHelper extends Base
         $suffixes = array('', 'k', 'M', 'G', 'T');
 
         return round(pow(1024, $base - floor($base)), $precision).$suffixes[(int)floor($base)];
-    }
-
-    /**
-     * Get the number of bytes from PHP size
-     *
-     * @param  integer  $val        PHP size (example: 2M)
-     * @return integer
-     */
-    public function phpToBytes($val)
-    {
-        $size = (int) substr($val, 0, -1);
-        $last = strtolower(substr($val, -1));
-
-        switch ($last) {
-            case 'g':
-                $size *= 1024;
-            case 'm':
-                $size *= 1024;
-            case 'k':
-                $size *= 1024;
-        }
-
-        return $size;
     }
 
     /**
